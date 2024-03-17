@@ -10,45 +10,7 @@ from Adarsh import StartTime
 START_TEXT = """ Your Telegram DC Is : `{}`  """
 
 
-@StreamBot.on_message(filters.regex("maintainers😎"))
-async def maintainers(b,m):
-    try:
-       await b.send_message(chat_id=m.chat.id,text="HELLO",quote=True)
-    except Exception:
-                await b.send_message(
-                    chat_id=m.chat.id,
-                    text="I am Made By [Rk_botz](https://t.me/Rk_botz)",
-                    
-                    reply_markup=InlineKeyboardMarkup(
-                        [
-                            [
-                                InlineKeyboardButton("Owner💻", url=f"https://t.me/Rk_botowner")
-                            ]
-                        ]
-                    ),
-                    
-                    disable_web_page_preview=True)
-            
          
-@StreamBot.on_message(filters.regex("Subscribe ❤️"))
-async def follow_user(b,m):
-    try:
-       await b.send_message(chat_id=m.chat.id,text="HELLO",quote=True)
-    except Exception:
-                await b.send_message(
-                    chat_id=m.chat.id,
-                    text="<B>HERE'S THE SUBSCRIBE LINK</B>",
-                    
-                    reply_markup=InlineKeyboardMarkup(
-                        [
-                            [
-                                InlineKeyboardButton("Subscribe ❤️", url=f"https://t.me/Rk_update")
-                            ]
-                        ]
-                    ),
-                    
-                    disable_web_page_preview=True)
-        
 
 @StreamBot.on_message(filters.regex("DC"))
 async def start(bot, update):
